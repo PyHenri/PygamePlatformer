@@ -1,5 +1,5 @@
 # PygamePlatformer
-a basic design pattern for a 2D platformer using pygame(pygame.org)
+a basic design pattern for a 2D platformer using pygame(pygame.org) in under a hundred lines
 
 It includes a Player Class and a Class for creating blocks for the player to jump on
 
