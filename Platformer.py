@@ -47,7 +47,8 @@ class Player:
           self.vx = 0
         if block.Platform.colliderect(self.x, self.y + self.vy, self.width, self.height): #checking y collision
           self.vy = 0
-          self.y += block.Platform.top-self.rect.bottom  #remove remaining distance between floor and player
+          if block.Platform.y > self.y: #prevents a bug that makes the player jump through the block below
+            self.y += block.Platform.top-self.rect.bottom  #remove remaining distance between floor and player
       self.x += self.vx #adding velocity to coordinates
       self.y += self.vy
       self.vx = 0
